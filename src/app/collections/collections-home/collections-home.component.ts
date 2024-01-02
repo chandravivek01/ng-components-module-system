@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class CollectionsHomeComponent {
 
+  data = [
+    { name: 'Ram', age: 24, job: 'Designer' },
+    { name: 'Shyam', age: 20, job: 'Devops' },
+    { name: 'Sita', age: 24, job: 'Developer' }
+  ];
+  headers = [
+    { key: 'name', label: 'Name' },
+    { key: 'age', label: 'Age' },
+    { key: 'job', label: 'Job' },
+  ];
 }
