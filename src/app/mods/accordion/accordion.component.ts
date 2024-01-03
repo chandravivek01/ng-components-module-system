@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./accordion.component.css']
 })
 export class AccordionComponent {
+
+  @Input() items : any = [];
+
+  openedItemIndex = 0;
+
+  onTitleClick(index : number) {
+
+    if ( this.openedItemIndex === index )
+      this.openedItemIndex = -1;
+    else
+      this.openedItemIndex = index;
+  }
 
 }
